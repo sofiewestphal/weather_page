@@ -1,0 +1,38 @@
+{"query": 
+    {"count":1,
+    "created":"2018-04-23T14:20:40Z","lang":"en",
+    "results":{"channel":
+            {"units":{"distance":"mi","pressure":"in","speed":"mph","temperature":"F"},
+            "title":"Yahoo! Weather - Copenhagen, Hovedstaden, DK",
+            "link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-554890/",
+            "description":"Yahoo! Weather for Copenhagen, Hovedstaden, DK","language":"en-us","lastBuildDate":"Mon, 23 Apr 2018 04:20 PM CEST","ttl":"60",
+            "location":{"city":"Copenhagen","country":"Denmark","region":" Hovedstaden"},
+            "wind":{"chill":"61","direction":"270","speed":"22"},
+            "atmosphere":{"humidity":"41","pressure":"1006.0","rising":"0","visibility":"16.1"},
+            "astronomy":{"sunrise":"5:44 am","sunset":"8:33 pm"},
+            "image":{"title":"Yahoo! Weather","width":"142","height":"18","link":"http://weather.yahoo.com",
+                "url":"http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"},
+            "item":{"title":"Conditions for Copenhagen, Hovedstaden, DK at 03:00 PM CEST","lat":"55.674492","long":"12.55213","link":"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-554890/",
+            "pubDate":"Mon, 23 Apr 2018 03:00 PM CEST",
+            "condition":{"code":"30","date":"Mon, 23 Apr 2018 03:00 PM CEST","temp":"63","text":"Partly Cloudy"},"forecast": [
+                        {"code":"12","date":"23 Apr 2018","day":"Mon","high":"63","low":"49","text":"Rain"},
+                        {"code":"12","date":"24 Apr 2018","day":"Tue","high":"58","low":"47","text":"Rain"},
+                        {"code":"12","date":"25 Apr 2018","day":"Wed","high":"55","low":"44","text":"Rain"},
+                        {"code":"39","date":"26 Apr 2018","day":"Thu","high":"53","low":"44","text":"Scattered Showers"},{"code":"30","date":"27 Apr 2018","day":"Fri","high":"54","low":"43","text":"Partly Cloudy"},{"code":"28","date":"28 Apr 2018","day":"Sat","high":"54","low":"43","text":"Mostly Cloudy"},{"code":"28","date":"29 Apr 2018","day":"Sun","high":"55","low":"45","text":"Mostly Cloudy"},{"code":"23","date":"30 Apr 2018","day":"Mon","high":"57","low":"47","text":"Breezy"},{"code":"47","date":"01 May 2018","day":"Tue","high":"56","low":"48","text":"Scattered Thunderstorms"},
+                        {"code":"30","date":"02 May 2018","day":"Wed","high":"57","low":"48","text":"Partly Cloudy"}
+                    ],
+                "description":"\n
+\nCurrent Conditions:\n
+Partly Cloudy\n
+\n
+\nForecast:\n
+Mon - Rain. High: 63Low: 49\n
+Tue - Rain. High: 58Low: 47\n
+Wed - Rain. High: 55Low: 44\n
+Thu - Scattered Showers. High: 53Low: 44\n
+Fri - Partly Cloudy. High: 54Low: 43\n
+\n
+\nFull Forecast at Yahoo! Weather\n
+\n
+\n
+\n]]>","guid":{"isPermaLink":"false"}}}}}}
