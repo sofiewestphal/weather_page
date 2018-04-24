@@ -3,8 +3,28 @@ const containerForForecast = document.getElementById("containerForForecast");
 const inputLocation = document.getElementById("inputLocation");
 const headlineLocation = document.getElementById("headlineLocation");
 const containerForecast = document.getElementById("containerForecast");
+const suggestionList = document.getElementById("suggestions");
 
+let sInput;
 let jWeatherResponse;
+let jLocationResponse;
+let googleKey = "AIzaSyDBjEF3d2qAApW-Dc3hR60f08h9kgeJCuQ";
+
+inputLocation.addEventListener("input", function(){
+  sInput = inputLocation.value.toString().toLowerCase().trim();
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let sjLocationResponse = this.responseText;
+      jLocationResponse = JSON.parse(sjLocationResponse);
+      suggestionList.innerHTML = "";
+      showLocationPredictions()
+      
+    }
+  };
+  xhttp.open("GET", `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${sInput}&language=en&key=${googleKey}`);  
+  xhttp.send();
+})
 
 btnSubmitLocation.addEventListener("click", function(){
   const sTempUnit = document.getElementsByName('temperatureUnit');
@@ -36,6 +56,21 @@ btnSubmitLocation.addEventListener("click", function(){
   xhttp.send();
 });
 
+function showLocationPredictions(){
+  let sSuggestion;
+  jLocationResponse.predictions.forEach(function(prediction){
+    sSuggestion = prediction.description;
+    let htmlSuggestion = `<option value="${sSuggestion}">`;
+    console.log(sSuggestion);
+    suggestionList.insertAdjacentHTML("beforeend", htmlSuggestion);
+  });
+  console.log(suggestionList);
+}
+
+// suggestionList.addEventListener("click", function(){
+//   style.display = "none";
+// })
+
 function showWeather(){
   let sCity = jWeatherResponse.query.results.channel.location.city;
   let sRegion = jWeatherResponse.query.results.channel.location.region;
@@ -51,6 +86,5 @@ function showWeather(){
     let sLowTemp = day.low;
     let htmlForecast = `<p>${sDay} ${sDate} <br> It will be ${sDescription} with temperatures up to ${sHighTemp} and down to ${sLowTemp}.</p>`;
     containerForecast.insertAdjacentHTML("beforeend", htmlForecast);
-
   })
 }
